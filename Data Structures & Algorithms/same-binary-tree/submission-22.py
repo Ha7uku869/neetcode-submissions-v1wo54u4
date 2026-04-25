@@ -12,5 +12,5 @@ class Solution:
         elif not (p and q):
             return False
         elif p.val == q.val:
-            return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+            return isSameTree(p.left, q.left) and isSameTree(p.right, q.right)
         
