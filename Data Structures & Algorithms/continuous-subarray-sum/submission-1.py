@@ -1,0 +1,11 @@
+class Solution:
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        left = 0
+        while left <= len(nums) - 1:
+            cur_sum = 0
+            for right in range(len(nums)):
+                cur_sum += nums[right]
+                if cur_sum % k == 0:
+                    return True
+            left += 1
+        return False        
